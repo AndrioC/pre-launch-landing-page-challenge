@@ -10,6 +10,10 @@ import financialImg from '../../assets/images/illustration-financial-freedom.svg
 import lifestyleImg from '../../assets/images/illustration-lifestyle.svg'
 import workanywhereImg from '../../assets/images/illustration-work-anywhere.svg'
 
+/* Images for pricing section */
+import freeImg from '../../assets/images/icon-free.svg'
+import checkImg from '../../assets/images/icon-check.svg'
+
 const Home:React.FC = () => {
     return (
         <div className={styles.contentContainer}>
@@ -75,6 +79,66 @@ const Home:React.FC = () => {
                             Want to work AND travel? Go for it!.
                         </p>
                     </div>
+                </div>
+            </section>
+
+            {/* Princing section */}
+            <section>
+                <div className={styles.contentPrincing}>
+
+                    {/* Starting div */}
+                    <div className={styles.headerContentPrincing}>
+                        <h1>Our pricing plans</h1>
+                        <p>
+                            We only manke money when our creator make <br />
+                            money. Our plans are always affordable, and it's <br />
+                            completely free to get started.
+                        </p>
+                    </div>
+                    {/* Closing div */}
+
+                    {/* Starting div */}
+                    <div className={styles.containerPlans}>
+                        {/* Starting div */}
+                        <div className={styles.freePlanContent}>
+                            <img src={freeImg} alt="free-pricing"/>
+                            <div>
+                                <span>Dip your toe</span>
+                                <p>
+                                    Just getting started? No problem at <br />
+                                    all! Our free plan will take you a long <br />
+                                    way.
+                                </p>
+                            </div>
+
+                            {/* Starting div */}
+                            <div>
+                                <span>Free</span>
+                                <ul>
+                                    <li>
+                                        <img src={checkImg} alt="check-image"/>
+                                        <p>Unlimited products</p>
+                                    </li>
+                                    <li>
+                                        <img src={checkImg} alt="check-image"/>
+                                        <p>Basic analytics</p>
+                                    </li>
+                                    <li>
+                                        <img src={checkImg} alt="check-image"/>
+                                        <p>Limited marketplace exposure</p>
+                                    </li>
+                                    <li>
+                                        <img src={checkImg} alt="check-image"/>
+                                        <p>10% fee per transaction</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            {/* Closing div */}
+
+                        </div>
+                        {/* Closing div */}
+                    </div>
+                    {/* Closing div */}
                 </div>
             </section>
         </div>
