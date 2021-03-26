@@ -18,7 +18,13 @@
 
 
 body {
+
     background: var(--blue-900);
+
+    @media (max-width: 767px){
+        background: var(--blue-900) url('../assets/images/illustration-hero-mobile.png') no-repeat;
+        background-position: 0 142px;
+    }
 }
 
 body, input, textarea, select, button {

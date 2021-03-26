@@ -1,4 +1,115 @@
 .contentContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
     font-size: 18px;
     color: var(--white);
+
+    @media (max-width: 767px){
+        justify-content: center;
+    }
+}
+
+.headerSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contentInformation {
+    display: flex;
+    flex-direction: column;
+
+    /* Mobile */
+    @media (max-width: 767px){
+        align-items: center;
+        justify-content: center;
+        margin-top: 600px;
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 40px;
+            max-width: 250px;
+            text-align: center;
+
+            span {
+                display: inline-block;
+                color: var(--blue-50);
+            }
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 200;
+            color: var(--gray-300);
+            text-align: center;
+            line-height: 25px;
+            margin-top: 24px;
+        }
+
+
+        > img {
+            margin-top: 33px;
+        }
+
+    }
+}
+
+.contentCategories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 144px;
+
+
+    @media (max-width: 767px){
+        
+        > div {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            /* div that has the image inside */
+            > div {
+                width: 120px;
+                height: 124px;
+                border-radius: 45px;
+                background: var(--blue-500);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 60%;
+                }
+
+            }
+
+            span {
+                display: inline;
+                font-size: 18px;
+                font-weight: 800;
+                margin-top: 33px;
+            }
+
+            p {
+                font-size: 15px;
+                color: var(--gray-300);
+                line-height: 25px;
+                margin-top: 12px;
+            }
+
+            & + div {
+                margin-top: 57px;
+            }
+        }
+    }
+
+    
+
 }
