@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-50: #3EE9E5;
+    --blue-500: #093F68;
+    --blue-900: #080C20;
+
+    --gray-300: #777F98;
+
+    --white: #FFFFFF;
+
+    --pink-10: #FF2965;
+}
+
+
+body {
+    background: var(--blue-900);
+}
+
+body, input, textarea, select, button {
+    font-family: "Manrope", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
