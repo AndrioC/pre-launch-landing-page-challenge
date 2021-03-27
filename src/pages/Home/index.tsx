@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './styles.module.scss'
 
 import logoImg from '../../assets/images/logo.svg'
@@ -16,12 +16,17 @@ import checkImg from '../../assets/images/icon-check.svg'
 import checkBlueImg from '../../assets/images/icon-check-blue.svg'
 import paidImg from '../../assets/images/icon-paid.svg'
 
-/* Images fot tablet layout background */
-import leftbgImg from '../../assets/images/illustration-hero-left.svg'
-import middlebgImg from '../../assets/images/bg-hero-squiggle.svg'
-import rightbgImg from '../../assets/images/illustration-hero-right.svg'
-
 const Home:React.FC = () => {
+
+    const [emailValue, setEmailValue] = useState('')
+    const [isEmailValid, setIsEmailValid] = useState(true)
+
+    function checkEmail(email: string) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        setIsEmailValid(re.test(String(email).toLowerCase()))
+    }
+
+    
     return (
         <div>
             <header className={styles.headerSection}>
@@ -107,8 +112,8 @@ const Home:React.FC = () => {
                         <div className={styles.headerContentPrincing}>
                             <h1>Our pricing plans</h1>
                             <p>
-                                We only manke money when our creator make <br />
-                                money. Our plans are always affordable, and it's <br />
+                                We only manke money when our creator make
+                                money. Our plans are always affordable, and it's
                                 completely free to get started.
                             </p>
                         </div>
@@ -215,9 +220,17 @@ const Home:React.FC = () => {
 
                         <div className={styles.emailNotification}>
                             <form action="">
-                                <input type="email" placeholder="Email address"/>
-                                <button type="button">Get notified</button>
+                                <input type="email" 
+                                placeholder="Email address" 
+                                value={emailValue} 
+                                onChange={(e) => setEmailValue(e.target.value)} 
+                                style={{borderColor: isEmailValid ? '#FFF': '#FF2965', borderWidth: 2, borderStyle: 'solid'}}
+                                />
+                                <button type="button" onClick={() => checkEmail(emailValue)}>Get notified</button>
                             </form>
+                            <p
+                                style={{visibility: isEmailValid ? 'hidden' : 'visible', transition: 'visibility 20s'}}
+                            >Oops! That doesn't look like an email address!</p>
                         </div>
                     </div>
                 </section>
