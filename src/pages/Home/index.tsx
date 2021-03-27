@@ -188,6 +188,26 @@ const Home:React.FC = () => {
                     {/* Closing div */}
                 </div>
             </section>
+        
+        
+            {/* Notification section */}
+
+            <section className={styles.sectionNotification}>
+                <div className={styles.contentNotification}>
+                    <div className={styles.headerTitleNotification}>
+                        <h1>Get notified when we launch</h1>
+                    </div>
+
+                    <div className={styles.emailNotification}>
+                        <form action="">
+                            <input type="email" placeholder="Email address"/>
+                            <button type="button">Get notified</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+ 
+        
         </div>
     )
 }
