@@ -18,7 +18,7 @@ const Home:React.FC = () => {
     return (
         <div className={styles.contentContainer}>
             <header className={styles.headerSection}>
-                <img src={logoImg} alt="logo-image"/>
+                <img src={logoImg} alt="logo-icon"/>
             </header>
 
             {/* Information section */}
@@ -31,7 +31,7 @@ const Home:React.FC = () => {
                         looking to escape the rat race or set up a side <br />
                         hustle, we've got you covered.
                     </p>
-                    <img src={scrollImg} alt="scroll-image"/>
+                    <img src={scrollImg} alt="scroll-icon"/>
                 </div>
             </section>
 
@@ -41,7 +41,7 @@ const Home:React.FC = () => {
                 <div className={styles.contentCategories}>
                     <div>
                         <div>
-                            <img src={catImgPassion} alt="image-passion"/>
+                            <img src={catImgPassion} alt="passion-icon"/>
                         </div>
                         <span>Indulge your passions</span>
                         <p>
@@ -51,7 +51,7 @@ const Home:React.FC = () => {
                     </div>
                     <div>
                         <div>
-                            <img src={financialImg} alt="image-passion"/>
+                            <img src={financialImg} alt="financial-icon"/>
                         </div>
                         <span>Gain financial freedom</span>
                         <p>
@@ -61,7 +61,7 @@ const Home:React.FC = () => {
                     </div>
                     <div>
                         <div>
-                            <img src={lifestyleImg} alt="image-passion"/>
+                            <img src={lifestyleImg} alt="life-style-icon"/>
                         </div>
                         <span>Choose your lifestyle</span>
                         <p>
@@ -71,7 +71,7 @@ const Home:React.FC = () => {
                     </div>
                     <div>
                         <div>
-                            <img src={workanywhereImg} alt="image-passion"/>
+                            <img src={workanywhereImg} alt="work-anywhere-icon"/>
                         </div>
                         <span>Work from anywhere</span>
                         <p>
@@ -102,7 +102,7 @@ const Home:React.FC = () => {
                         {/* Starting div */}
                         <div className={styles.freePlanContent}>
                             <img src={freeImg} alt="free-pricing"/>
-                            <div>
+                            <div className={styles.freePlanHeaderTitleContent}>
                                 <span>Dip your toe</span>
                                 <p>
                                     Just getting started? No problem at <br />
@@ -112,26 +112,28 @@ const Home:React.FC = () => {
                             </div>
 
                             {/* Starting div */}
-                            <div>
-                                <span>Free</span>
-                                <ul>
-                                    <li>
-                                        <img src={checkImg} alt="check-image"/>
-                                        <p>Unlimited products</p>
-                                    </li>
-                                    <li>
-                                        <img src={checkImg} alt="check-image"/>
-                                        <p>Basic analytics</p>
-                                    </li>
-                                    <li>
-                                        <img src={checkImg} alt="check-image"/>
-                                        <p>Limited marketplace exposure</p>
-                                    </li>
-                                    <li>
-                                        <img src={checkImg} alt="check-image"/>
-                                        <p>10% fee per transaction</p>
-                                    </li>
-                                </ul>
+                            <div className={styles.freePlanInfoContent}>
+                                <h1>Free</h1>
+                                <div className={styles.freePlanInfoList}>
+                                    <ul>
+                                        <li>
+                                            <img src={checkImg} alt="check-icon"/>
+                                            <p>Unlimited products</p>
+                                        </li>
+                                        <li>
+                                            <img src={checkImg} alt="check-icon"/>
+                                            <p>Basic analytics</p>
+                                        </li>
+                                        <li>
+                                            <img src={checkImg} alt="check-icon"/>
+                                            <p>Limited marketplace exposure</p>
+                                        </li>
+                                        <li>
+                                            <img src={checkImg} alt="check-icon"/>
+                                            <p>10% fee per transaction</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             {/* Closing div */}
 

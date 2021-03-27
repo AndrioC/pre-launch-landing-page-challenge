@@ -167,6 +167,7 @@
     align-items: center;
     justify-content: center;
     background: var(--blue-500);
+    position: relative;
 
     ul {
         li {
@@ -179,5 +180,69 @@
         width: 327px;
         height: 436px;
         border-radius: 9px;
+
+        > img {
+            position: absolute;
+            top: -21px;
+            left: 30px;
+        }
+    }
+}
+
+.freePlanHeaderTitleContent {
+
+    @media(max-width: 767px){
+        margin-top: 30px;
+
+        span {
+            display: inline;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--gray-300);
+            margin-top: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+
+.freePlanInfoContent {
+    display: flex;
+    flex-direction: column;
+
+
+    @media(max-width: 767px){
+        margin-top: 27px;  
+        h1 {
+            font-size: 39px;    
+        }
+    }
+}
+
+.freePlanInfoList {
+    
+    @media(max-width: 767px){
+        
+        ul {
+            li {
+                display: flex;
+                
+                img {
+                    margin-right: 27px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+
+                & + li {
+                    margin-top: 12px;
+                }
+            }
+        }
     }
 }
