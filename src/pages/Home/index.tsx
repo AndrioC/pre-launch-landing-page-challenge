@@ -229,7 +229,7 @@ const Home:React.FC = () => {
                                 <button type="button" onClick={() => checkEmail(emailValue)}>Get notified</button>
                             </form>
                             <p
-                                style={{visibility: isEmailValid ? 'hidden' : 'visible', transition: 'visibility 20s'}}
+                                style={{visibility: isEmailValid ? 'hidden' : 'visible'}}
                             >Oops! That doesn't look like an email address!</p>
                         </div>
                     </div>
