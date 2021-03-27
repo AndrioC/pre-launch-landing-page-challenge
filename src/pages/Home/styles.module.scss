@@ -228,6 +228,7 @@
     @media(max-width: 767px){
         
         ul {
+            margin-top: 18px;
             li {
                 display: flex;
                 
@@ -237,6 +238,114 @@
 
                 p {
                     font-size: 15px;
+                }
+
+                & + li {
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Pay plan */
+
+.payPlanContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-50);
+    position: relative;
+
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+
+
+    @media(max-width: 767px){
+        width: 327px;
+        height: 436px;
+        border-radius: 9px;
+        margin-top: 66px;
+
+        > img {
+            position: absolute;
+            top: -33px;
+            left: 30px;
+        }
+    }
+}
+
+.payPlanHeaderTitleContent {
+
+    @media(max-width: 767px){
+        margin-top: 30px;
+        margin-left: 10px;
+
+        span {
+            display: inline;
+            font-size: 18px;
+            font-weight: bolder;
+            color: var(--blue-900);
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--blue-900);
+            opacity: 0.6;
+            margin-top: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+
+.payPlanInfoContent {
+    display: flex;
+    flex-direction: column;
+
+
+    @media(max-width: 767px){
+        margin-top: 27px;  
+        h1 {
+            font-size: 39px;   
+            color: var(--blue-900);
+            margin-left: 3px;
+            position: relative;
+            
+            span {
+                font-size: 15px;
+                font-weight: lighter;    
+                position: absolute;
+                opacity: 0.6;
+                top: 18px;
+                left: 153px;
+            }
+        }
+    }
+}
+
+.payPlanInfoList {
+    
+    @media(max-width: 767px){
+        
+        ul {
+            margin-top: 18px;
+            margin-left: 10px;
+            li {
+                display: flex;
+                
+                img {
+                    margin-right: 27px;
+                }
+
+                p {
+                    font-size: 15px;   
+                    color: var(--blue-900);
                 }
 
                 & + li {

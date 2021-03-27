@@ -13,6 +13,8 @@ import workanywhereImg from '../../assets/images/illustration-work-anywhere.svg'
 /* Images for pricing section */
 import freeImg from '../../assets/images/icon-free.svg'
 import checkImg from '../../assets/images/icon-check.svg'
+import checkBlueImg from '../../assets/images/icon-check-blue.svg'
+import paidImg from '../../assets/images/icon-paid.svg'
 
 const Home:React.FC = () => {
     return (
@@ -99,6 +101,7 @@ const Home:React.FC = () => {
 
                     {/* Starting div */}
                     <div className={styles.containerPlans}>
+                        
                         {/* Starting div */}
                         <div className={styles.freePlanContent}>
                             <img src={freeImg} alt="free-pricing"/>
@@ -139,6 +142,48 @@ const Home:React.FC = () => {
 
                         </div>
                         {/* Closing div */}
+
+
+                        {/* Starting div  - Pay plan  */}
+                        <div className={styles.payPlanContent}>
+                            <img src={paidImg} alt="paid-pricing"/>
+                            <div className={styles.payPlanHeaderTitleContent}>
+                                <span>Dive right in</span>
+                                <p>
+                                    Ready for the big time? Our paid plan <br />
+                                    will help you take your business to the <br />
+                                    next level.
+                                </p>
+                            </div>
+
+                            {/* Starting div*/}
+                            <div className={styles.payPlanInfoContent}>
+                                <h1>$25.00 <span>/month</span></h1>
+                                <div className={styles.payPlanInfoList}>
+                                    <ul>
+                                        <li>
+                                            <img src={checkBlueImg} alt="check-icon"/>
+                                            <p>Custom domain</p>
+                                        </li>
+                                        <li>
+                                            <img src={checkBlueImg} alt="check-icon"/>
+                                            <p>Advanced analytics and reports</p>
+                                        </li>
+                                        <li>
+                                            <img src={checkBlueImg} alt="check-icon"/>
+                                            <p>High marketplace visibility</p>
+                                        </li>
+                                        <li>
+                                            <img src={checkBlueImg} alt="check-icon"/>
+                                            <p>5% fee per transaction</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {/* Closing div*/}
+
+                        </div>
+                        {/* Closing div - Pay plan  */}
                     </div>
                     {/* Closing div */}
                 </div>
