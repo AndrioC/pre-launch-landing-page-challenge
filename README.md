@@ -43,4 +43,4 @@ This project was built using the following techs:
 
 - ReactJS.
 - TypeScript.
-- Sass.
+- Scss.
