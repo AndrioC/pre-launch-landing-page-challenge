@@ -18,7 +18,7 @@ Hello, this project was created to complete the frontendmentor challenge. Feel f
 </h1>
 
 <h1>
-    <p>Demo (quality not so good)</p>
+    <p>Demo</p>
     <img src="src/assets/images/project-completed-demo.gif">
 </h1>
 
