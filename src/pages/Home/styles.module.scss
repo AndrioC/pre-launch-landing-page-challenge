@@ -7,21 +7,39 @@
     color: var(--white);
     margin-bottom: 165px;
 
-    @media (max-width: 767px){
+    /* Mobile */
+    @media (max-width: 993px) and (min-width: 768px) {
         justify-content: center;
+
+        background: url('../../assets/images/illustration-hero-left.svg'), url('../../assets/images/bg-hero-squiggle.svg'), url('../../assets/images/illustration-hero-right.svg');
+        background-repeat: no-repeat;
+        background-size: 314px 356px, 386px 268px, 314px 356px;
+        background-position: top 60px left -171px, top 111px left 222px, top 60px right -171px;
     }
+
+    
 }
 
 .headerSection {
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 40px;
+
+    /* Mobile */
+    @media (max-width: 767px){
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Tablet */
+    @media (max-width: 993px) and (min-width: 768px) {
+        margin-left: 39px;    
+    }
 }
 
 .contentInformation {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     /* Mobile */
     @media (max-width: 767px){
@@ -49,6 +67,7 @@
             text-align: center;
             line-height: 25px;
             margin-top: 24px;
+            max-width: 320px;
         }
 
 
@@ -56,6 +75,43 @@
             margin-top: 33px;
         }
 
+    }
+
+    /* Tablet */
+    @media (max-width: 993px) and (min-width: 768px){
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        margin-top: 129px;
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 40px;
+            max-width: 360px;
+            text-align: center;
+
+            span {
+                display: inline-block;
+                color: var(--blue-50);
+            }
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 200;
+            color: var(--gray-300);
+            text-align: center;
+            line-height: 25px;
+            margin-top: 24px;
+            max-width: 440px;
+        }
+
+
+        > img {
+            margin-top: 33px;
+        }
+        
     }
 }
 
@@ -66,51 +122,96 @@
     flex-direction: column;
     margin-top: 144px;
 
+    .divWithImage{
+        width: 120px;
+        height: 124px;
+        border-radius: 45px;
+        background: var(--blue-500);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 60%;
+        }
+    }
+
+    .divWithText {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        span {
+            display: inline;
+            font-size: 18px;
+            font-weight: 800;
+            margin-top: 33px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--gray-300);
+            line-height: 25px;
+            margin-top: 12px;
+            text-align: center;
+        }
+    }
+
 
     @media (max-width: 767px){
         
         > div {
             display: flex;
-            align-items: center;
             flex-direction: column;
+            align-items: center;
             justify-content: center;
-
-            /* div that has the image inside */
-            > div {
-                width: 120px;
-                height: 124px;
-                border-radius: 45px;
-                background: var(--blue-500);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    width: 60%;
-                }
-
-            }
-
-            span {
-                display: inline;
-                font-size: 18px;
-                font-weight: 800;
-                margin-top: 33px;
-            }
-
-            p {
-                font-size: 15px;
-                color: var(--gray-300);
-                line-height: 25px;
-                margin-top: 12px;
-            }
 
             & + div {
                 margin-top: 57px;
             }
         }
+
+        .divWithText{
+            max-width: 340px;
+            p { 
+                text-align: center;
+            }
+        }
+
     }
 
+    /* Tablet */
+    @media (max-width: 993px) and (min-width: 768px){
+        margin-top: 180px;
+        flex-direction: column;
+
+        > div {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .divWithImage{
+            margin-top: 30px;
+        }
+
+        .divWithText{
+            align-items: flex-start;
+            text-align: center;
+            margin-left: 57px;
+            max-width: 340px;
+
+            p {
+                text-align: justify;
+            }
+        }
+
+        .divCategorieMargin{
+            margin-right: 120px;
+        }
+
+    }
     
 
 }
@@ -125,6 +226,10 @@
         margin-top: 144px;
     }
 
+    @media(max-width: 993px) and (min-width: 768px){
+        margin-top: 180px;
+    }
+
 }
 
 .headerContentPrincing {
@@ -133,21 +238,19 @@
     align-items: center;
     justify-content: center;
 
-    @media(max-width: 767px){
-
-        h1 {
-            font-size: 24px;
-            font-weight: 800;
-        }
-
-        p {
-            font-size: 15px;
-            color: var(--gray-300);
-            margin-top: 27px;
-            text-align: center;
-            line-height: 25px;
-        }
+    h1 {
+        font-size: 24px;
+        font-weight: 800;
     }
+
+    p {
+        font-size: 15px;
+        color: var(--gray-300);
+        margin-top: 27px;
+        text-align: center;
+        line-height: 25px;
+    }
+
 }
 
 
@@ -160,6 +263,11 @@
         margin-top: 57px; 
         flex-direction: column;  
     }
+
+    @media (max-width: 993px) and (min-width: 768px){
+        margin-top: 72px;
+        flex-direction: column;    
+    }
 }
 
 .freePlanContent {
@@ -169,6 +277,7 @@
     justify-content: center;
     background: var(--blue-500);
     position: relative;
+    border-radius: 9px;   
 
     ul {
         li {
@@ -176,74 +285,82 @@
         }
     }
 
+    > img {
+        position: absolute;
+        top: -21px;
+        left: 30px;
+    }
+
 
     @media(max-width: 767px){
         width: 327px;
         height: 436px;
-        border-radius: 9px;
+    }
 
-        > img {
-            position: absolute;
-            top: -21px;
-            left: 30px;
-        }
+    @media (max-width: 993px) and (min-width: 768px){
+        align-items: flex-start;
+        width: 445px;
+        height: 425px;        
     }
 }
 
 .freePlanHeaderTitleContent {
+    display: flex;
+    flex-direction: column;
+    span {
+        display: inline;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    p {
+        font-size: 15px;
+        color: var(--gray-300);
+        margin-top: 18px;
+        line-height: 24px;
+    }
 
     @media(max-width: 767px){
         margin-top: 30px;
-
-        span {
-            display: inline;
-            font-size: 18px;
-            font-weight: bolder;
-        }
-
-        p {
-            font-size: 15px;
-            color: var(--gray-300);
-            margin-top: 18px;
-            line-height: 24px;
-        }
     }
+
+    @media (max-width: 993px) and (min-width: 768px){
+        margin-left: 40px;
+    }
+
 }
 
 
 .freePlanInfoContent {
     display: flex;
     flex-direction: column;
+    margin-top: 27px;  
+    h1 {
+        font-size: 39px;    
+    }
 
 
-    @media(max-width: 767px){
-        margin-top: 27px;  
-        h1 {
-            font-size: 39px;    
-        }
+    @media (max-width: 993px) and (min-width: 768px){
+        margin-left: 40px;
     }
 }
 
 .freePlanInfoList {
-    
-    @media(max-width: 767px){
-        
-        ul {
-            margin-top: 18px;
-            li {
-                display: flex;
-                
-                img {
-                    margin-right: 27px;
-                }
+    ul {
+        margin-top: 18px;
+        li {
+            display: flex;
+            
+            img {
+                margin-right: 27px;
+            }
 
-                p {
-                    font-size: 15px;
-                }
+            p {
+                font-size: 15px;
+            }
 
-                & + li {
-                    margin-top: 12px;
-                }
+            & + li {
+                margin-top: 12px;
             }
         }
     }
@@ -259,6 +376,8 @@
     justify-content: center;
     background: var(--blue-50);
     position: relative;
+    border-radius: 9px;
+    margin-top: 66px;
 
     ul {
         li {
@@ -266,41 +385,50 @@
         }
     }
 
+    > img {
+        position: absolute;
+        top: -33px;
+        left: 30px;
+    }
+
 
     @media(max-width: 767px){
         width: 327px;
         height: 436px;
-        border-radius: 9px;
-        margin-top: 66px;
+    }
 
-        > img {
-            position: absolute;
-            top: -33px;
-            left: 30px;
-        }
+    @media (max-width: 993px) and (min-width: 768px){
+        align-items: flex-start;
+        width: 445px;
+        height: 425px;    
     }
 }
 
 .payPlanHeaderTitleContent {
 
+    margin-top: 30px;
+
+    span {
+        display: inline;
+        font-size: 18px;
+        font-weight: bolder;
+        color: var(--blue-900);
+    }
+
+    p {
+        font-size: 15px;
+        color: var(--blue-900);
+        opacity: 0.6;
+        margin-top: 18px;
+        line-height: 24px;
+    }
+
     @media(max-width: 767px){
-        margin-top: 30px;
         margin-left: 10px;
+    }
 
-        span {
-            display: inline;
-            font-size: 18px;
-            font-weight: bolder;
-            color: var(--blue-900);
-        }
-
-        p {
-            font-size: 15px;
-            color: var(--blue-900);
-            opacity: 0.6;
-            margin-top: 18px;
-            line-height: 24px;
-        }
+    @media (max-width: 993px) and (min-width: 768px){
+        margin-left: 30px;
     }
 }
 
@@ -309,52 +437,55 @@
     display: flex;
     flex-direction: column;
 
+    h1 {
+        font-size: 39px;   
+        color: var(--blue-900);
+        margin-left: 3px;
+        position: relative;
+        
+        span {
+            font-size: 15px;
+            font-weight: lighter;    
+            position: absolute;
+            opacity: 0.6;
+            top: 18px;
+            left: 153px;
+        }
+    }
+
 
     @media(max-width: 767px){
         margin-top: 27px;  
-        h1 {
-            font-size: 39px;   
-            color: var(--blue-900);
-            margin-left: 3px;
-            position: relative;
-            
-            span {
-                font-size: 15px;
-                font-weight: lighter;    
-                position: absolute;
-                opacity: 0.6;
-                top: 18px;
-                left: 153px;
-            }
-        }
+    }
+
+    @media (max-width: 993px) and (min-width: 768px){
+        margin-left: 30px;
     }
 }
 
 .payPlanInfoList {
-    
-    @media(max-width: 767px){
-        
-        ul {
-            margin-top: 18px;
-            margin-left: 10px;
-            li {
-                display: flex;
-                
-                img {
-                    margin-right: 27px;
-                }
 
-                p {
-                    font-size: 15px;   
-                    color: var(--blue-900);
-                }
+    ul {
+        margin-top: 18px;
+        margin-left: 10px;
+        li {
+            display: flex;
+            
+            img {
+                margin-right: 27px;
+            }
 
-                & + li {
-                    margin-top: 12px;
-                }
+            p {
+                font-size: 15px;   
+                color: var(--blue-900);
+            }
+
+            & + li {
+                margin-top: 12px;
             }
         }
     }
+
 }
 
 .sectionNotification{
@@ -365,6 +496,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+  
 }
 
 
@@ -373,67 +506,88 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-
-    @media(max-width: 767px){
-        margin-top: 144px;
-    }
+    margin-top: 144px;
+    
 }
 
 .headerTitleNotification{
 
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
     @media(max-width: 767px){
         h1 {
-            font-size: 24px;
             max-width: 240px;
-            text-align: center;
         }
     }
+
 }
 
 
 .emailNotification{
     display: flex;
     flex-direction: column;
+    margin-top: 60px;
 
-    @media(max-width: 767px){
-        margin-top: 30px;
+    > form {
+        display: flex;
+        flex-direction: row;
 
-        > form {
-            display: flex;
-            flex-direction: column;
+        input {
+            width: 327px;
+            height: 48px;
+            border-radius: 24px;
+            padding-left: 18px;
+            font-size: 15px;
+            font-weight: bold;
+            background: var(--blue-500);
+            border: none;
+            color: var(--white);
 
-            input {
-                width: 327px;
-                height: 48px;
-                border-radius: 24px;
-                padding-left: 18px;
-                font-size: 15px;
-                font-weight: bold;
-                background: var(--blue-500);
-                border: none;
-
-                &::placeholder{
-                    color: var(--white);
-                    opacity: 0.4;
-                }
+            &::placeholder{
+                color: var(--white);
+                opacity: 0.4;
             }
 
-            button {
-                margin-top: 24px;
-                width: 327px;
-                height: 48px;    
-                border-radius: 24px;
-                border: none;
-                background: var(--blue-50);
-                color: var(--blue-500);
-                font-size: 15px;
-                font-weight: bolder;
-                transition: filter 0.2s;
+            &:focus{
+                outline: none;
+                border: 2px var(--blue-50) solid;
+            }
+        }
 
-                &:hover{
-                    filter: brightness(0.81);
-                }
+        button {
+            margin-left: 10px;
+            width: 140px;
+            height: 48px;    
+            border-radius: 24px;
+            border: none;
+            background: var(--blue-50);
+            color: var(--blue-500);
+            font-size: 15px;
+            font-weight: bolder;
+            transition: filter 0.2s;
+
+            &:hover{
+                filter: brightness(0.81);
             }
         }
     }
+
+    @media(max-width: 767px){
+        > form {
+            flex-direction: column;
+
+            button {
+                width: 327px;
+                height: 48px;   
+                margin-left: 0px;
+                margin-top: 24px;
+            }
+        }
+        
+    }
+
+
 }
